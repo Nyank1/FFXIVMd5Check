@@ -1,0 +1,29 @@
+﻿<Window x:Class="FFXIV_MD5_CHECK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FFXIV_MD5_CHECK"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Title="FF14游戏完整性检查器"
+        FontFamily="幼圆"
+        FontSize="18"
+        Height="256" Width="512">
+    <Grid>
+        <Button x:Name="btnSelect" Content="选择文件" Margin="410,10,10,0" Height="26" VerticalAlignment="Top" Click="btnSelect_Click"/>
+        <!--TODO: Binding fontsize of pathSelect with its text-->
+        <TextBox x:Name="pathSelect" TextWrapping="NoWrap" FontSize="14" IsReadOnly="True" Height="25" Margin="100,11,102,0" Text="" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtSelect" Height="25" Margin="10,11,410,0" TextWrapping="NoWrap" Text="游戏文件：" VerticalAlignment="Top"/>
+        <Button x:Name="btnSimpleCheck" Content="简单检查" Margin="410,41,9.667,0" Height="26" VerticalAlignment="Top" Click="btnSimpleCheck_Click"/>
+        <CheckBox x:Name="checkBoxaFFXIV" Content="2.0数据（game/sqpack/ffxiv/）" Margin="100,41,101.667,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBoxaEX1" Content="3.0数据 （game/sqpack/ex1/）" Margin="100,65,101.667,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBoxaEX2" Content="4.0数据（game/sqpack/ex2/）" Margin="100,89,101.667,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBoxaEX3" IsChecked="True"  Content="5.0内容（game/sqpack/ex3/）" Margin="100,113,101.667,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtVersion" Height="35" Margin="10,150,9.667,0" TextWrapping="NoWrap" TextAlignment="Center" FontSize="28" Text="游戏版本" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="pb" Margin="0,0,-0.333,0" Height="33" VerticalAlignment="Bottom"/>
+
+
+    </Grid>
+</Window>
